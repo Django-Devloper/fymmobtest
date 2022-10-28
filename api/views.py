@@ -1,4 +1,3 @@
-from django.shortcuts import render, HttpResponseRedirect, reverse, redirect
 from rest_framework import viewsets
 from .models import *
 from .seriliazers import *
@@ -7,8 +6,6 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 
-from django.views import View
-from rest_framework import generics
 @method_decorator(login_required, name='dispatch')
 class CustomerViewSet(viewsets.ModelViewSet):
     queryset = Trips.objects.all()
@@ -21,3 +18,5 @@ class CustomerViewSet(viewsets.ModelViewSet):
         return super().get_queryset(*args, **kwargs).filter(
             user=self.request.user
         )
+
+    print(queryset.values())

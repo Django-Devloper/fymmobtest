@@ -18,6 +18,7 @@ class CustomerSerilizer(serializers.ModelSerializer):
     user=UserSerilizer()
     origin=serializers.ReadOnlyField(source="origin.city")
     destination=serializers.ReadOnlyField(source="destination.city")
+    status=serializers.ReadOnlyField(source="status.status_choice")
     class Meta:
         model = Trips
         fields= ['user','starttime','endtime','duration','origin','destination','status','distance','total_price','fare_details']

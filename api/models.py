@@ -36,15 +36,15 @@ class Trips(models.Model):
     origin=models.ForeignKey(City,on_delete=models.CASCADE,related_name='origin')
     destination=models.ForeignKey(City,on_delete=models.CASCADE,related_name='destination')
     status=models.ForeignKey(StatusChoice,on_delete=models.CASCADE)
-    distance=models.PositiveSmallIntegerField(default=50)
+    distance=models.PositiveSmallIntegerField(default=10)
     fare_details=models.ForeignKey(PriceOption,on_delete=models.CASCADE,default=activefare)
 
     def duration(self):
         duration =self.starttime-self.endtime
         return duration
 
-    @property
+
     def total_price(self):
-        D = self.distance-int(self.total.freekm)
+        D = self.distance-int(self.fare_details.freekm)
         total = self.fare_details.dbp+(D*self.fare_details.dap)*self.fare_details.tmf
         return total
