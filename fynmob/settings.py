@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#8sf3niw85x8z$_py6ao1-#8q@neyy8d(a#vo+s2uaqao#1%x^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["fynmob.herokuapp.com"]
 
 
 # Application definition

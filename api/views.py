@@ -19,4 +19,3 @@ class CustomerViewSet(viewsets.ModelViewSet):
             user=self.request.user
         )
 
-    print(queryset.values())
