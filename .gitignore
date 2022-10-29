@@ -3,7 +3,6 @@
 *.pot
 *.pyc
 __pycache__
-Procfile
 # Backup files #
 *.bak
 

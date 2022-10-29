@@ -3,8 +3,6 @@ from .models import *
 # Register your models here.
 
 admin.site.register(StatusChoice)
-admin.site.register(City)
-
 @admin.register(PriceOption)
 class PriceOptionAdmin(admin.ModelAdmin):
     list_display = ['name','freekm', 'dbp', 'dap', 'tmf','isactive']
@@ -14,4 +12,4 @@ class PriceOptionAdmin(admin.ModelAdmin):
 class PriceOptionAdmin(admin.ModelAdmin):
     readonly_fields=('fare_details',)
 
-    list_display = ['user','starttime', 'endtime', 'origin', 'destination','status','distance']
+    list_display = ['id','user','starttime', 'endtime', 'origin', 'destination','status','distance','fare_details','total_fare']
