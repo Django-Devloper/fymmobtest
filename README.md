@@ -31,9 +31,10 @@ there is two magor data table to work
 Make sure isactive status should be False before adding new price option with new Active status true . (only one price option should be True )
 ![image](https://user-images.githubusercontent.com/107532268/198297779-4cc7c70c-b300-4044-a7e4-ff31cb725780.png)
 
-2. Trips Details - contain every user trips infornmation 
-![image](https://user-images.githubusercontent.com/107532268/198298116-d6c63392-892e-43e6-bb7f-93c208e17bc1.png)
-to add new details click on add trip button .
+2. Trips Details - contain every user trips infornmation to add new details click on add trip button .
+
+![image](https://user-images.githubusercontent.com/107532268/198753485-02b7f734-fcba-4f6c-9c12-8843c01d468a.png)
+
 ![image](https://user-images.githubusercontent.com/107532268/198298441-82881d71-a4f7-439c-954a-22a683b0d4ab.png)
 
 fare details is read only fields automatic select price option isactive true price option 
